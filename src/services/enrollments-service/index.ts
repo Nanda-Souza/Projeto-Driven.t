@@ -9,7 +9,7 @@ import { ViaCEPAddress } from '@/protocols';
 async function getAddressFromCEP(cep: string) {
   const result = await request.get(`${process.env.VIA_CEP_API}/${cep}/json/`);
 
-  if (!result.data || result.data.error) {
+  if (!result.data || result.data.erro) {
     throw formatError();
   }
 
